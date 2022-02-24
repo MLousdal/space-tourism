@@ -1,26 +1,22 @@
+@use "@/assets/scss/base/media" as *;
+
+html {
+  color-scheme: dark;
+
+  --brand: #d0d6f9;
+
+  --link: var(--text-1);
+  --link-visited: var(--grape-3);
+
+  --text-1: #ffffff;
+  --text-2: var(--brand);
+
+  --surface-1: #0b0d17;
+
+  --shadow-color: 220 3% 65%;
+}
+
 body {
-  color: var(--text-2);
-  background-color: var(--surface-1);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-dt {
   color: var(--text-1);
-}
-
-a[href] {
-  color: var(--link);
-
-  &:visited {
-    color: var(--link-visited);
-  }
-}
-
-:focus-visible {
-  outline-color: var(--link);
+  background-color: var(--surface-1);
 }
