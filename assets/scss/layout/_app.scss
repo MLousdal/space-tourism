@@ -1,0 +1,27 @@
+.preview {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-fluid-2);
+  justify-content: center;
+  padding-top: var(--size-10);
+  text-align: center;
+
+  header {
+    justify-items: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-3);
+  }
+
+  img {
+    width: fit-content;
+  }
+
+  h1 {
+    color: var(--brand);
+  }
+}

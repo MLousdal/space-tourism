@@ -1,0 +1,135 @@
+:root {
+  // Generated using https://www.fluid-type-scale.com/
+  --font-size-1: clamp(0.8rem, 0.28vw + 0.73rem, 0.98rem);
+  --font-size-2: clamp(1rem, 0.47vw + 0.89rem, 1.31rem);
+  --font-size-3: clamp(1.25rem, 0.75vw + 1.07rem, 1.75rem);
+  --font-size-4: clamp(1.56rem, 1.16vw + 1.29rem, 2.33rem);
+  --font-size-5: clamp(1.95rem, 1.74vw + 1.55rem, 3.11rem);
+  --font-size-6: clamp(2.44rem, 2.56vw + 1.84rem, 4.14rem);
+  --font-size-7: clamp(3.05rem, 3.71vw + 2.18rem, 5.52rem);
+  --font-size-8: clamp(3.81rem, 5.33vw + 2.57rem, 7.36rem);
+}
+
+body {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: var(--font-size-2);
+  line-height: var(--font-lineheight-3);
+  color: var(--font-color);
+  -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
+}
+
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: var(--font-lineheight-1);
+  font-weight: var(--font-weight-7);
+}
+h1 {
+  font-size: var(--font-size-7);
+  max-inline-size: var(--size-header-1);
+}
+h2 {
+  font-size: var(--font-size-6);
+  max-inline-size: var(--size-header-2);
+}
+h3 {
+  font-size: var(--font-size-5);
+}
+h4 {
+  font-size: var(--font-size-4);
+}
+h5 {
+  font-size: var(--font-size-3);
+}
+h6 {
+  font-size: var(--font-size-1);
+}
+
+h3,
+h4,
+h5,
+h6,
+dt {
+  max-inline-size: var(--size-header-3);
+}
+
+p,
+ul,
+ol,
+dl,
+h6 {
+  font-size: var(--font-size-2);
+}
+
+a,
+u,
+ins,
+abbr {
+  text-underline-offset: 1px;
+}
+
+a[href],
+area,
+button,
+input,
+label[for],
+select,
+summary,
+textarea,
+[tabindex]:not([tabindex*="-"]) {
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+a {
+  padding-inline: var(--size-1);
+  margin-inline: calc(var(--size-1) * -1);
+  padding-block: var(--size-1);
+  margin-block: calc(var(--size-1) * -1);
+
+  &[href] {
+    text-decoration-color: var(--indigo-2);
+
+    &:visited {
+      text-decoration-color: var(--grape-2);
+    }
+  }
+
+  &:not(:hover) {
+    text-decoration: inherit;
+  }
+}
+
+small {
+  font-size: var(--font-size-1);
+}
+
+b {
+  font-weight: var(--font-weight-7);
+}
+
+strong {
+  font-weight: var(--font-weight-9);
+}
+
+em,
+i,
+dfn,
+cite,
+var {
+  font-style: italic;
+}
+
+ins {
+  text-decoration: underline;
+}
+
+mark {
+  background-color: var(--color-primary-light);
+  color: var(--font-color-inverse);
+}

@@ -1,0 +1,256 @@
+@use "@/assets/scss/base/media" as *;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+* {
+  background-origin: border-box;
+  background-repeat: no-repeat;
+  margin: 0;
+
+  &:not(fieldset) {
+    border-width: 0;
+    border-style: solid;
+  }
+}
+
+@media ($motionOK) {
+  :focus-visible {
+    transition: outline-offset 145ms var(--ease-2);
+  }
+  :not(:active):focus-visible {
+    transition-duration: 0.25s;
+  }
+}
+
+:not(:active):focus-visible {
+  outline-offset: 5px;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+}
+
+img,
+svg,
+video {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+input,
+button,
+textarea,
+select,
+input[type="file"]::-webkit-file-upload-button {
+  font: inherit;
+  font-size: inherit;
+  color: inherit;
+  letter-spacing: inherit;
+  border: 1px solid var(--gray-5);
+  border-radius: var(--radius-2);
+}
+
+input {
+  padding-inline: var(--size-2);
+  padding-block: var(--size-1);
+}
+
+select {
+  padding-inline: var(--size-2);
+  padding-block: var(--size-1);
+}
+
+textarea {
+  resize: block;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  block-size: var(--size-3);
+  inline-size: var(--size-3);
+}
+
+svg {
+  stroke: none;
+  fill: currentColor;
+
+  &:not([fill]) {
+    stroke: currentColor;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+
+  &:not([width]) {
+    inline-size: var(--size-10);
+  }
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: var(--font-mono);
+}
+:not(pre) > code,
+kbd {
+  white-space: nowrap;
+}
+
+pre {
+  white-space: pre;
+  min-inline-size: 0;
+  max-inline-size: max-content;
+}
+
+:not(pre) > code {
+  padding: var(--size-1) var(--size-2);
+  background: var(--surface-2);
+  border-radius: var(--radius-2);
+}
+
+kbd,
+var {
+  padding: var(--size-1) var(--size-2);
+  border-width: var(--border-size-1);
+  border-color: var(--surface-4);
+  border-radius: var(--radius-2);
+}
+
+mark {
+  border-radius: var(--radius-2);
+  padding-inline: var(--size-1);
+}
+
+ol,
+ul {
+  padding-inline-start: var(--size-8);
+}
+li {
+  padding-inline-start: var(--size-2);
+}
+li,
+dd,
+figcaption {
+  max-inline-size: var(--size-content-2);
+}
+p {
+  max-inline-size: var(--size-content-3);
+}
+dt,
+summary {
+  font-weight: var(--font-weight-7);
+}
+
+dt:not(:first-of-type) {
+  margin-block-start: var(--size-5);
+}
+
+small {
+  font-size: max(0.5em, var(--font-size-0));
+  max-inline-size: var(--size-content-1);
+}
+
+hr {
+  margin-block: var(--size-fluid-5);
+  height: var(--border-size-2);
+  background-color: var(--surface-3);
+}
+
+figure {
+  display: grid;
+  gap: var(--size-2);
+  place-items: center;
+
+  & > figcaption {
+    font-size: var(--font-size-1);
+  }
+}
+
+blockquote,
+:not(blockquote) > cite {
+  border-inline-start-width: var(--border-size-3);
+}
+
+blockquote {
+  display: grid;
+  gap: var(--size-3);
+  max-inline-size: var(--size-content-2);
+  padding-block: var(--size-3);
+  padding-inline: var(--size-4);
+}
+
+:not(blockquote) > cite {
+  padding-inline-start: var(--size-2);
+}
+
+summary {
+  background: var(--surface-3);
+  padding: var(--size-2) var(--size-3);
+  margin: calc(var(--size-2) * -1) calc(var(--size-3) * -1);
+  border-radius: var(--radius-2);
+}
+
+details {
+  padding-inline: var(--size-3);
+  padding-block: var(--size-2);
+  background: var(--surface-2);
+  border-radius: var(--radius-2);
+}
+
+details[open] > summary {
+  margin-bottom: var(--size-2);
+  border-end-start-radius: 0;
+  border-end-end-radius: 0;
+}
+
+fieldset {
+  border-radius: var(--radius-2);
+}
+
+del {
+  background: var(--red-9);
+  color: var(--red-2);
+  text-decoration: line-through;
+}
+
+ins {
+  background: var(--green-9);
+  color: var(--green-1);
+}
+
+abbr {
+  text-decoration-color: var(--blue-5);
+}
+
+table {
+  display: inline-block;
+  overflow: auto;
+  border-spacing: var(--size-2);
+  border-collapse: separate;
+  * {
+    white-space: nowrap;
+  }
+}
+
+html {
+  --scrollbar-color: var(--gray-7);
+  scrollbar-color: var(--scrollbar-color) transparent;
+  accent-color: var(--brand);
+  caret-color: var(--brand);
+
+  @media ($OSlight) {
+    --scrollbar-color: var(--gray-4);
+  }
+}
