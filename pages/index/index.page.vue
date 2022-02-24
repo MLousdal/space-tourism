@@ -1,5 +1,5 @@
 <script setup>
-import Link from '@/renderer/Link.vue'
+// import Link from '@/renderer/Link.vue'
 import { computed, reactive } from 'vue'
 import { useHead } from '@vueuse/head'
 
@@ -9,7 +9,6 @@ const siteData = reactive({
 })
 
 useHead({
-  // Can be static or computed
   title: computed(() => siteData.title),
   meta: [
     {
@@ -21,15 +20,10 @@ useHead({
 </script>
 
 <template>
-  <main class="wrapper preview">
-    <img alt="Vue logo" src="@/assets/logo.svg" />
+  <main class="home">
     <header>
       <h1>Home page!</h1>
       <p class="text-5">Vite + Vue 3 + Vite-plugin-ssr + Open-props</p>
     </header>
-    <nav>
-      <Link href="/about">About page</Link>
-      <Link href="/open-props">OpenProps Page</Link>
-    </nav>
   </main>
 </template>
