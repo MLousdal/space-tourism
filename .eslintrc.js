@@ -12,7 +12,7 @@ module.exports = {
     // override/add rules settings here, such as:
     // 'vue/no-unused-vars': 'error'
     "vue/multi-word-component-names": ["error", {
-      "ignores": ['destination.page']
+      "ignores": ['destination.page', 'index.page']
     }]
   }
 }

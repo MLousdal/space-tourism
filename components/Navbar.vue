@@ -19,7 +19,7 @@ import Link from '@/renderer/Link.vue'
           </Link>
         </li>
         <li>
-          <Link href="/crew">
+          <Link href="/meet-your-crew">
             <strong>02</strong> Crew
           </Link>
         </li>

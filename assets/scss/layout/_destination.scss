@@ -7,38 +7,30 @@
   width: 100vw;
 }
 
-main.destination .wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding-bottom: var(--size-7);
-  padding-top: 13.25rem;
-  position: relative;
-}
-
-.content-wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding-top: var(--size-7);
-  align-items: center;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  // gap: var(--size-3);
-
-  h1 {
-    line-height: var(--font-lineheight-3);
+.destination {
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: var(--size-7);
+    align-items: center;
   }
-}
 
-.content-info {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  gap: var(--size-9);
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    h1 {
+      line-height: var(--font-lineheight-3);
+    }
+  }
+
+  .content-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--size-9);
+  }
 }
 
 .dest-nav {
