@@ -9,11 +9,10 @@
   --font-size-7: 9.375rem;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;1,400&family=Bellefair&display=swap");
 body {
-  font-family: "Barlow Condensed", var(--font-sans);
+  font-family: "Barlow Condensed";
   font-weight: 400;
-  font-size: var(--font-size-2);
+  font-size: 120%;
   line-height: var(--font-lineheight-5);
   color: var(--font-color);
   -webkit-text-size-adjust: none; /* https://kilianvalkhof.com/2022/css-html/your-css-reset-needs-text-size-adjust-probably/ */
@@ -32,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Bellefair", var(--font-serif);
+  font-family: "Bellefair";
   line-height: var(--font-lineheight-0);
   font-weight: var(--font-weight-7);
   text-transform: uppercase;
@@ -72,7 +71,6 @@ dt {
   max-inline-size: var(--size-header-3);
 }
 
-p,
 ul,
 ol,
 dl,
