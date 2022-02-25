@@ -48,7 +48,11 @@
   display: none !important;
 }
 
-.capitalize {
+.transparent {
+  opacity: 0.25;
+}
+
+.uppercase {
   text-transform: uppercase;
 }
 
@@ -147,6 +151,9 @@
   &brand {
     color: var(--brand);
   }
+  &white {
+    color: #ffffff;
+  }
   &dark {
     color: var(--gray-9);
   }
@@ -200,5 +207,14 @@
   }
   &brand {
     filter: var(--filter-brand);
+  }
+}
+
+.font {
+  &-serif {
+    font-family: "Bellefair", var(--font-serif);
+  }
+  &-sans {
+    font-family: "Barlow Condensed", var(--font-sans);
   }
 }

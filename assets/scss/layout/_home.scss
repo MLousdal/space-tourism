@@ -1,3 +1,5 @@
+@use "@/assets/scss/base/media" as *;
+
 .content > .home {
   background-image: url("@/assets/home/background-home-desktop.jpg");
   background-size: cover;
@@ -5,18 +7,20 @@
   min-height: 100vh;
 }
 
-main .wrapper {
+main.home .wrapper {
   display: flex;
+  position: relative;
   flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   padding-top: 25rem;
+  padding-bottom: var(--size-7);
 }
 
 header {
   display: flex;
   flex-direction: column;
-  gap: var(--size-5);
+  // gap: var(--size-5);
 }
 
 .explore {
@@ -29,4 +33,28 @@ header {
   text-decoration: none;
   display: grid;
   place-items: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff25;
+    padding: var(--size-11);
+    border-radius: var(--radius-round);
+    @media ($motionOK) {
+      & {
+        transition: all 0.2s linear;
+      }
+    }
+  }
+
+  &:focus,
+  &:hover {
+    &::before {
+      padding: 14rem;
+    }
+  }
 }

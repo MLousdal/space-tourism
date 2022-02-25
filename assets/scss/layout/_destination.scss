@@ -1,0 +1,73 @@
+@use "@/assets/scss/base/media" as *;
+
+.content .destination {
+  background-image: url("@/assets/destination/background-destination-desktop.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+main.destination .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: var(--size-7);
+  padding-top: 13.25rem;
+  position: relative;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: var(--size-7);
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  // gap: var(--size-3);
+
+  h1 {
+    line-height: var(--font-lineheight-3);
+  }
+}
+
+.content-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--size-9);
+}
+
+.dest-nav {
+  ul {
+    display: flex;
+    flex-direction: row;
+    gap: var(--size-8);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: 0;
+      padding-block: 1px;
+
+      a {
+        border-bottom: 2px solid transparent;
+        display: block;
+        padding: var(--size-2) 0;
+        text-decoration: none;
+        white-space: nowrap;
+        color: var(--text-2);
+
+        &:focus,
+        &:hover,
+        &.active {
+          border-bottom: 2px solid var(--text-1);
+        }
+      }
+    }
+  }
+}

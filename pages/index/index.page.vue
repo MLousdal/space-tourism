@@ -1,23 +1,5 @@
 <script setup>
 import Link from '@/renderer/Link.vue'
-import { computed, reactive } from 'vue'
-import { useHead } from '@vueuse/head'
-// import "@/assets/scss/base/media";
-
-const siteData = reactive({
-  title: `Frontend Mentor | Space tourism website`,
-  description: `Home page description`,
-})
-
-useHead({
-  title: computed(() => siteData.title),
-  meta: [
-    {
-      name: `description`,
-      content: computed(() => siteData.description),
-    },
-  ],
-})
 </script>
 
 <template>
@@ -32,7 +14,7 @@ useHead({
           because we’ll give you a truly out of this world experience!
         </p>
       </header>
-      <Link class="explore" href="/">
+      <Link class="explore" href="/destination">
         <span>EXPLORE</span>
       </Link>
     </div>

@@ -4,6 +4,8 @@ import Link from '@/renderer/Link.vue'
 
 <template>
   <div class="navbar">
+    <img src="@/assets/shared/logo.svg" alt="logo" />
+    <div class="line transparent"></div>
     <nav>
       <ul>
         <li>

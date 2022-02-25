@@ -16,8 +16,8 @@ async function render(pageContext) {
 
   // See https://vite-plugin-ssr.com/head
   // const { documentProps } = pageContext
-  const title = (head && head.title) || 'Vite SSR app'
-  const desc = (head && head.description) || 'App using Vite + vite-plugin-ssr + open-props'
+  const title = (head && head.title) || 'Frontend Mentor | Space tourism website'
+  const desc = (head && head.description) || 'Space tourism website description'
 
   const documentHtml = escapeInject`<!DOCTYPE html>
     <html lang="en">
