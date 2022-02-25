@@ -1,0 +1,70 @@
+@use "@/assets/scss/base/media" as *;
+
+.content .tech {
+  background-image: url("@/assets/technology/background-technology-desktop.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+.tech {
+  .content-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--size-11);
+    padding-top: var(--size-11);
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+
+    .sub-title {
+      line-height: var(--font-lineheight-00);
+      font-size: var(--font-size-2);
+      text-transform: uppercase;
+      font-family: "Bellefair", var(--font-serif);
+    }
+
+    h1 {
+      line-height: var(--font-lineheight-00);
+      padding-block: var(--size-3);
+      font-size: var(--font-size-5);
+      text-transform: uppercase;
+    }
+  }
+
+  .pagination {
+    display: flex;
+    flex-flow: column;
+    gap: var(--size-5);
+    justify-self: flex-start;
+
+    .page {
+      background-color: transparent;
+      border-radius: var(--radius-round);
+      border: 1px solid #ffffff25;
+      color: #ffffff;
+      display: grid;
+      font-family: "Bellefair", var(--font-serif);
+      font-size: var(--font-size-4);
+      height: 80px;
+      line-height: 0;
+      place-items: center;
+      width: 80px;
+
+      &.active {
+        color: var(--surface-1);
+        background-color: #ffffff;
+        border: 1px solid #ffffff;
+      }
+    }
+  }
+
+  img {
+    position: absolute;
+    right: calc(var(--size-12) * -1);
+  }
+}
