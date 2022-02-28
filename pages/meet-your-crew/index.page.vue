@@ -4,8 +4,8 @@
 <template>
   <main class="subpage crew">
     <div class="wrapper">
-      <header>
-        <p class="text-3 uppercase">
+      <header class="page-title">
+        <p>
           <span class="transparent">02</span>
           Meet your crew
         </p>
@@ -27,7 +27,10 @@
         <div class="page"></div>
         <div class="page"></div>
       </div>
+      <picture>
+        <source srcset="/assets/crew/image-douglas-hurley.webp" type="image/webp" />
+        <img src="@/assets/crew/image-douglas-hurley.png" alt="image of douglas hurley" />
+      </picture>
     </div>
-    <img src="@/assets/crew/image-douglas-hurley.png" alt="image of the moon" />
   </main>
 </template>

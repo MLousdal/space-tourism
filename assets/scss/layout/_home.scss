@@ -7,7 +7,19 @@
   min-height: 100vh;
 }
 
-main.home .wrapper {
+@media ($md-n-below) {
+  .content .home {
+    background-image: url("@/assets/home/background-home-tablet.jpg");
+  }
+}
+
+@media ($sm-n-below) {
+  .content .home {
+    background-image: url("@/assets/home/background-home-mobile.jpg");
+  }
+}
+
+.home .wrapper {
   display: flex;
   position: relative;
   flex-direction: row;
@@ -20,20 +32,25 @@ main.home .wrapper {
 header {
   display: flex;
   flex-direction: column;
-  // gap: var(--size-5);
+
+  h1 {
+    font-size: 9rem;
+  }
 }
 
 .explore {
   background-color: var(--text-1);
-  color: var(--surface-1) !important;
-  padding: calc(var(--size-10) + 24px) var(--size-9);
   border-radius: var(--radius-round);
-  font-size: var(--font-size-4);
-  font-family: "Bellefair", var(--font-serif);
-  text-decoration: none;
+  color: var(--surface-1) !important;
   display: grid;
+  font-family: "Bellefair", var(--font-serif);
+  font-size: var(--font-size-4);
+  line-height: 0;
   place-items: center;
   position: relative;
+  text-decoration: none;
+  width: 240px;
+  height: 240px;
 
   &::before {
     content: "";
@@ -55,6 +72,53 @@ header {
   &:hover {
     &::before {
       padding: 14rem;
+    }
+  }
+}
+
+@media ($lg-n-below) {
+  .home .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: var(--size-11);
+    align-items: center;
+    padding-top: 12.5rem;
+
+    header {
+      gap: var(--size-5);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .home .wrapper {
+    padding-top: 5.5rem;
+    gap: var(--size-9);
+
+    header {
+      gap: var(--size-3);
+
+      .header-5 {
+        font-size: var(--font-size-2);
+      }
+    }
+
+    .explore {
+      width: 150px;
+      height: 150px;
+      font-size: var(--font-size-3);
+
+      &::before {
+        padding: 5rem;
+      }
+
+      &:focus,
+      &:hover {
+        &::before {
+          padding: 7rem;
+        }
+      }
     }
   }
 }

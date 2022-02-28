@@ -1,3 +1,5 @@
+@use "@/assets/scss/base/media" as *;
+
 .navbar {
   width: 95vw;
   height: fit-content;
@@ -17,6 +19,11 @@
     transform: scaleX(1.3) translateX(10%);
     position: relative;
     z-index: 2;
+  }
+
+  .nav-btn {
+    display: none;
+    border: none;
   }
 
   nav {
@@ -50,6 +57,45 @@
           }
         }
       }
+    }
+  }
+}
+
+@media ($lg-n-below) {
+  .navbar {
+    top: 0;
+
+    nav {
+      grid-column: 3;
+      ul {
+        padding-left: var(--size-8);
+      }
+    }
+    .line {
+      display: none;
+    }
+  }
+}
+
+@media ($md-n-below) {
+  .navbar {
+    grid-template-columns: var(--size-8) auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90vw;
+    right: 5vw;
+    .nav-btn {
+      display: block;
+      padding-block: var(--size-7);
+    }
+    nav {
+      display: none;
     }
   }
 }

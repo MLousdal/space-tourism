@@ -6,9 +6,28 @@
   justify-content: space-between;
   padding-bottom: var(--size-7);
   padding-top: 13.25rem;
-  position: relative;
 
-  & > header p span {
-    margin-right: var(--size-5);
+  .page-title p {
+    font-size: var(--font-size-3);
+    color: var(--text-1);
+    text-transform: uppercase;
+    span {
+      margin-right: var(--size-5);
+    }
+  }
+
+  @media ($md-n-below) {
+    & {
+      padding-top: 8.5rem;
+    }
+  }
+  @media (max-width: 500px) {
+    & {
+      padding-top: 5.5rem;
+
+      header {
+        align-items: center;
+      }
+    }
   }
 }

@@ -7,6 +7,18 @@
   width: 100vw;
 }
 
+@media ($md-n-below) {
+  .content .destination {
+    background-image: url("@/assets/destination/background-destination-tablet.jpg");
+  }
+}
+
+@media ($sm-n-below) {
+  .content .destination {
+    background-image: url("@/assets/destination/background-destination-mobile.jpg");
+  }
+}
+
 .destination {
   .content-wrapper {
     display: flex;
@@ -26,6 +38,9 @@
   }
 
   .content-info {
+    border-top: 2px solid #ffffff25;
+    padding-top: var(--size-4);
+    margin-top: var(--size-5);
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -61,5 +76,33 @@
         }
       }
     }
+  }
+}
+
+@media ($lg-n-below) {
+  .destination .content-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: var(--size-7);
+
+    article {
+      align-items: center;
+    }
+
+    picture {
+      max-width: 50%;
+    }
+  }
+  .content {
+    justify-content: center;
+    align-items: center;
+  }
+  .destination .content-info {
+    width: 100%;
+    justify-content: center;
+  }
+  .dest-nav ul {
+    justify-content: center;
   }
 }

@@ -1,3 +1,5 @@
+@use "@/assets/scss/base/media" as *;
+
 :root {
   // Generated using https://www.fluid-type-scale.com/
   --font-size-1: 0.875rem;
@@ -7,6 +9,16 @@
   --font-size-5: 3.5rem;
   --font-size-6: 6.25rem;
   --font-size-7: 9.375rem;
+}
+
+@media ($lg-n-below) {
+  :root {
+    --font-size-3: 1.25rem;
+    --font-size-7: 5rem;
+  }
+  body {
+    font-size: 100%;
+  }
 }
 
 body {
@@ -22,6 +34,7 @@ p {
   line-height: var(--font-lineheight-5);
   max-inline-size: 50ch;
   color: var(--brand);
+  font-size: 1rem;
 }
 
 // Headings

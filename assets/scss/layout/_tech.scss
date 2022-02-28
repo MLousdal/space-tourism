@@ -7,6 +7,18 @@
   width: 100vw;
 }
 
+@media ($md-n-below) {
+  .content .tech {
+    background-image: url("@/assets/technology/background-technology-tablet.jpg");
+  }
+}
+
+@media ($sm-n-below) {
+  .content .tech {
+    background-image: url("@/assets/technology/background-technology-mobile.jpg");
+  }
+}
+
 .tech {
   .content-wrapper {
     display: flex;
@@ -63,8 +75,70 @@
     }
   }
 
-  img {
+  picture {
     position: absolute;
-    right: calc(var(--size-12) * -1);
+    right: calc(var(--size-7) * -1);
+  }
+
+  @media ($lg-n-below) {
+    & .wrapper {
+      gap: var(--size-8);
+    }
+    .page-title {
+      order: -1;
+    }
+    .content {
+      .sub-title {
+        font-size: 1.5rem;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+    .content-wrapper {
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      gap: var(--size-7);
+      padding-top: 0;
+      order: 1;
+    }
+    .pagination {
+      flex-flow: row;
+      gap: var(--size-5);
+      justify-self: center;
+
+      .page {
+        width: 60px;
+        height: 60px;
+        font-size: var(--font-size-3);
+      }
+    }
+
+    picture {
+      order: 0;
+      position: relative;
+      right: 0;
+      transform: scale(1.15);
+    }
+  }
+  @media (max-width: 500px) {
+    .pagination {
+      .page {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-size-2);
+      }
+    }
+    .content {
+      .sub-title {
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
   }
 }

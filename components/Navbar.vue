@@ -30,5 +30,6 @@ import Link from '@/renderer/Link.vue'
         </li>
       </ul>
     </nav>
+    <input type="image" name="nav-btn" src="/assets/shared/icon-hamburger.svg" class="nav-btn" />
   </div>
 </template>

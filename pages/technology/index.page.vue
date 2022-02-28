@@ -4,8 +4,8 @@
 <template>
   <main class="subpage tech">
     <div class="wrapper">
-      <header>
-        <p class="text-3 uppercase">
+      <header class="page-title">
+        <p>
           <span class="transparent">03</span>
           SPACE LAUNCH 101
         </p>
@@ -31,8 +31,14 @@
             >A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!</p>
           </section>
         </article>
-        <img src="@/assets/technology/image-launch-vehicle-portrait.jpg" alt="image of the moon" />
       </section>
+      <picture>
+        <source
+          media="(max-width: 1024px)"
+          srcset="/assets/technology/image-launch-vehicle-landscape.jpg"
+        />
+        <img src="@/assets/technology/image-launch-vehicle-portrait.jpg" alt="image of the moon" />
+      </picture>
     </div>
   </main>
 </template>

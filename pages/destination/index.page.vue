@@ -5,14 +5,17 @@ import Link from '@/renderer/Link.vue'
 <template>
   <main class="subpage destination">
     <div class="wrapper">
-      <header>
-        <p class="text-3 uppercase">
+      <header class="page-title">
+        <p>
           <span class="transparent">01</span>
           Pick your destination
         </p>
       </header>
       <section class="content-wrapper">
-        <img src="@/assets/destination/image-moon.png" alt="image of the moon" />
+        <picture>
+          <source srcset="/assets/destination/image-moon.webp" type="image/webp" />
+          <img src="@/assets/destination/image-moon.png" alt="image of the moon" />
+        </picture>
         <article>
           <nav class="dest-nav">
             <ul>
@@ -33,7 +36,6 @@ import Link from '@/renderer/Link.vue'
           <section class="content">
             <h1>MOON</h1>
             <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
-            <hr />
             <section class="content-info">
               <div>
                 <p class="text-1">AVG. DISTANCE</p>

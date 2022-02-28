@@ -30,18 +30,6 @@
   width: 90%;
   max-width: 1110px;
   margin-inline: auto;
-
-  @media ($md-n-below) {
-    & {
-      width: 95%;
-    }
-  }
-
-  @media ($sm-n-below) {
-    & {
-      width: 97%;
-    }
-  }
 }
 
 .hide {
