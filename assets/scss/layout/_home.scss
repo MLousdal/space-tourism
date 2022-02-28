@@ -4,10 +4,11 @@
   background-image: url("@/assets/home/background-home-desktop.jpg");
   background-size: cover;
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
-@media ($md-n-below) {
+@media ($lg-n-below) {
   .content .home {
     background-image: url("@/assets/home/background-home-tablet.jpg");
   }
@@ -87,11 +88,16 @@ header {
 
     header {
       gap: var(--size-5);
+      align-items: center;
+
+      h1 {
+        font-size: 5rem;
+      }
     }
   }
 }
 
-@media (max-width: 500px) {
+@media ($sm-n-below) {
   .home .wrapper {
     padding-top: 5.5rem;
     gap: var(--size-9);

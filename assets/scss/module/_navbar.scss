@@ -55,6 +55,10 @@
           &.active {
             border-bottom: 2px solid var(--text-1);
           }
+
+          strong {
+            margin-right: var(--size-2);
+          }
         }
       }
     }
@@ -69,6 +73,10 @@
       grid-column: 3;
       ul {
         padding-left: var(--size-8);
+
+        strong {
+          display: none;
+        }
       }
     }
     .line {

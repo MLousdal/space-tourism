@@ -76,7 +76,7 @@
     right: var(--size-11);
   }
 
-  @media ($lg-n-below) {
+  @media ($xl-n-below) {
     & .wrapper {
       gap: var(--size-7);
     }
@@ -106,15 +106,62 @@
         height: var(--size-2);
       }
     }
+  }
+
+  @media ($xl-n-below) and ($landscape) {
     picture {
-      position: absolute;
-      bottom: 0;
       right: 50%;
       transform: translateX(50%);
+      max-height: 50vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+
+      img {
+        max-width: 50%;
+        display: block;
+        object-fit: contain;
+      }
     }
   }
 
-  @media (max-width: 500px) {
+  @media ($lg-n-below) {
+    picture {
+      right: 50%;
+      transform: translateX(50%);
+      height: 50vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+
+      img {
+        object-position: bottom center;
+        max-width: 100%;
+        display: block;
+        object-fit: contain;
+      }
+    }
+  }
+
+  @media ($md-n-below) and ($portrait) {
+    picture {
+      right: 50%;
+      transform: translateX(50%);
+      height: 45vh;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+
+      img {
+        object-position: bottom center;
+        max-width: 100%;
+        display: block;
+        object-fit: contain;
+      }
+    }
+  }
+
+  @media ($sm-n-below) {
     & .content-wrapper {
       order: 2;
       .content {
@@ -135,16 +182,9 @@
     }
     picture {
       position: relative;
-      bottom: 0;
       right: 0;
       transform: none;
       border-bottom: 2px solid #ffffff25;
-      display: flex;
-      justify-content: center;
-
-      img {
-        max-width: 50%;
-      }
     }
   }
 }

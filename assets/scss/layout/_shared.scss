@@ -16,12 +16,17 @@
     }
   }
 
-  @media ($md-n-below) {
+  @media ($xl-n-below) and ($landscape) {
     & {
       padding-top: 8.5rem;
     }
   }
-  @media (max-width: 500px) {
+  @media ($lg-n-below) {
+    & {
+      padding-top: 8.5rem;
+    }
+  }
+  @media ($sm-n-below) {
     & {
       padding-top: 5.5rem;
 

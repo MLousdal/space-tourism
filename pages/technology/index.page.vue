@@ -34,7 +34,7 @@
       </section>
       <picture>
         <source
-          media="(max-width: 1024px)"
+          media="(max-width: 1300px)"
           srcset="/assets/technology/image-launch-vehicle-landscape.jpg"
         />
         <img src="@/assets/technology/image-launch-vehicle-portrait.jpg" alt="image of the moon" />
