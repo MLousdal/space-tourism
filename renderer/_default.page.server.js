@@ -6,7 +6,7 @@ import logoUrl from '@/assets/favicon-32x32.png'
 
 export { render }
 // See https://vite-plugin-ssr.com/data-fetching
-export const passToClient = ['pageProps', 'urlPathname']
+export const passToClient = ['pageProps', 'urlPathname', 'render', 'effect', 'state', '_'] 
 
 async function render(pageContext) {
   const app = createApp(pageContext)

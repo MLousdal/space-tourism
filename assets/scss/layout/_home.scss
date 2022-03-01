@@ -8,7 +8,7 @@
   overflow: hidden;
 }
 
-@media ($lg-n-below) {
+@media ($lg-n-below), ($portrait) {
   .content .home {
     background-image: url("@/assets/home/background-home-tablet.jpg");
   }
@@ -77,14 +77,14 @@ header {
   }
 }
 
-@media ($lg-n-below) {
+@media ($lg-n-below), ($portrait) {
   .home .wrapper {
     flex-direction: column;
     justify-content: center;
     text-align: center;
     gap: var(--size-11);
     align-items: center;
-    padding-top: 12.5rem;
+    padding-top: 15rem;
 
     header {
       gap: var(--size-5);
@@ -99,7 +99,7 @@ header {
 
 @media ($sm-n-below) {
   .home .wrapper {
-    padding-top: 5.5rem;
+    padding-top: 7.5rem;
     gap: var(--size-9);
 
     header {
