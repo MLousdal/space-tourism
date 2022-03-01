@@ -47,7 +47,6 @@
           display: block;
           padding: var(--size-7) 0;
           text-decoration: none;
-          white-space: nowrap;
           border-bottom: 2px solid transparent;
 
           &:focus,
@@ -101,9 +100,54 @@
     .nav-btn {
       display: block;
       padding-block: var(--size-7);
+      position: relative;
+      z-index: var(--layer-important);
     }
     nav {
-      display: none;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: -5vw;
+      bottom: 0;
+      gap: var(--size-3);
+      width: 67.5vw;
+      min-height: 100vh;
+      height: fit-content;
+
+      ul {
+        padding-top: 7.5rem;
+        padding-left: 0;
+        flex-direction: column;
+        height: 100%;
+
+        li {
+          padding: 0;
+          padding-block: 1px;
+
+          a {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            padding-inline: var(--size-7) var(--size-10);
+            border-bottom: none;
+            border-right: 2px solid transparent;
+
+            &:focus,
+            &:hover,
+            &.active {
+              border-bottom: none;
+              border-right: 2px solid var(--text-1);
+            }
+
+            strong {
+              display: block;
+            }
+          }
+        }
+      }
     }
+  }
+  body {
+    overflow: hidden;
   }
 }
