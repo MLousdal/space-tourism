@@ -21,11 +21,11 @@ function toggleShowMenu(state) {
   showMenu.value = state
   if (state === true) {
     document.querySelector('body').style.overflow = 'hidden'
-    navBtn.value.src = "/assets/shared/icon-close.svg"
+    navBtn.value.src = "/icon-close.svg"
   }
   if (state === false) {
     document.querySelector('body').style.overflow = 'auto'
-    navBtn.value.src = "/assets/shared/icon-hamburger.svg"
+    navBtn.value.src = "/icon-hamburger.svg"
   }
 }
 
@@ -83,7 +83,7 @@ onUnmounted(() => {
       ref="navBtn"
       type="image"
       name="nav-btn"
-      src="/assets/shared/icon-hamburger.svg"
+      src="/icon-hamburger.svg"
       class="nav-btn"
       @click="toggleShowMenu(!showMenu)"
     />
