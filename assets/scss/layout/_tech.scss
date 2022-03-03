@@ -119,10 +119,10 @@
     picture {
       order: 0;
       position: relative;
-      right: 0;
+      left: calc(45vw - 100vw / 2);
+      width: 100vw;
 
       img {
-        transform: scale(1.15);
         width: 100%;
       }
     }

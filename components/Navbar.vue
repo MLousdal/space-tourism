@@ -6,14 +6,12 @@ let showMenu = ref(true)
 const navBtn = ref(null)
 
 function mqResize() {
-  console.log('resize')
   const mql = window.matchMedia('(max-width: 600px)')
   if (mql.matches) {
-    console.log('matches');
     toggleShowMenu(false)
   } else {
     toggleShowMenu(true)
-    console.log('else matches');
+    document.querySelector('body').style.overflowY = 'auto'
   }
 }
 
